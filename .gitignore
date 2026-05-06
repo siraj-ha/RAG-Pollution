@@ -4,5 +4,4 @@ venv/
 __pycache__/
 *.pyc
 .vscode/
-data/*
-!data/.gitkeep
+data/*.pdf
