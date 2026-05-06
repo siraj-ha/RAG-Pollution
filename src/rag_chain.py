@@ -1,5 +1,5 @@
 from langchain_groq import ChatGroq
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 
@@ -7,9 +7,9 @@ load_dotenv()
 
 def build_rag_chain():
     llm = ChatGroq(
-        model_name="llama3-8b-8192",
-        temperature=0.2
-    )
+    model_name="llama-3.1-8b-instant",
+    temperature=0.2
+)
 
     prompt = PromptTemplate.from_template("""
 You are a helpful assistant. Answer the question using ONLY the context below.
